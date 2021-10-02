@@ -9,4 +9,5 @@
     <string name="overage">Overage:</string>
     <string name="button">Button</string>
     <string name="goBtn">Go</string>
+    <string name="clear">Clear</string>
 </resources>
