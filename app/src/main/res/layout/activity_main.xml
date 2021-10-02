@@ -124,6 +124,7 @@
         android:layout_height="55dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="32dp"
+        android:onClick="getValue"
         android:text="@string/goBtn"
         app:layout_constraintStart_toEndOf="@+id/editTextNumber"
         app:layout_constraintTop_toBottomOf="@+id/totalWithTip" />
@@ -155,19 +156,21 @@
         android:id="@+id/overageTxt"
         android:layout_width="183dp"
         android:layout_height="33dp"
+        android:layout_marginStart="108dp"
         android:layout_marginTop="24dp"
         android:background="#61B8B3B3"
-        app:layout_constraintTop_toBottomOf="@+id/totAmtPerPersonTxt"
-        tools:layout_editor_absoluteX="206dp" />
+        app:layout_constraintStart_toEndOf="@+id/overage"
+        app:layout_constraintTop_toBottomOf="@+id/totAmtPerPersonTxt" />
 
     <TextView
         android:id="@+id/totWithTipTxt"
         android:layout_width="141dp"
         android:layout_height="40dp"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="196dp"
         android:background="#61B8B3B3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal"
-        tools:layout_editor_absoluteX="246dp" />
+        app:layout_constraintStart_toEndOf="@+id/totalWithTip"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
 
     <TextView
         android:id="@+id/tipAmtTxt"
