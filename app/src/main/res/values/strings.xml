@@ -10,4 +10,8 @@
     <string name="button">Button</string>
     <string name="goBtn">Go</string>
     <string name="clear">Clear</string>
+    <string name="_12">12%</string>
+    <string name="_15">15%</string>
+    <string name="_18">18%</string>
+    <string name="_20">20%</string>
 </resources>
