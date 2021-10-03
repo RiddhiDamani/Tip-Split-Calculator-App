@@ -1,18 +1,15 @@
 package com.riddhidamani.tipsplit;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,16 +37,15 @@ public class MainActivity extends AppCompatActivity {
         numOfPplTxtValue = findViewById(R.id.numOfPplTxt);
         totAmtPerPersonTxtValue = findViewById(R.id.totAmtPerPersonTxt);
         overageTxtValue = findViewById(R.id.overageTxt);
-
     }
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
 
-        outState.putString("billTotalValue", billTotalValue.getText().toString());
+        //outState.putString("billTotalValue", billTotalValue.getText().toString());
+        //outState.putString("numOfPplTxtValue", numOfPplTxtValue.getText().toString());
         outState.putString("tipAmtTxtValue", tipAmtTxtValue.getText().toString());
         outState.putString("totWithTipTxtValue", totWithTipTxtValue.getText().toString());
-        outState.putString("numOfPplTxtValue", numOfPplTxtValue.getText().toString());
         outState.putString("totAmtPerPersonTxtValue", totAmtPerPersonTxtValue.getText().toString());
         outState.putString("overageTxtValue", overageTxtValue.getText().toString());
 
@@ -62,21 +58,26 @@ public class MainActivity extends AppCompatActivity {
         // Call super first
         super.onRestoreInstanceState(savedInstanceState);
 
-        billTotalValue.setText(savedInstanceState.getString("billTotalValue"));
+        //billTotalValue.setText(savedInstanceState.getString("billTotalValue"));
+        //numOfPplTxtValue.setText(savedInstanceState.getString("numOfPplTxtValue"));
         tipAmtTxtValue.setText(savedInstanceState.getString("tipAmtTxtValue"));
         totWithTipTxtValue.setText(savedInstanceState.getString("totWithTipTxtValue"));
-        numOfPplTxtValue.setText(savedInstanceState.getString("numOfPplTxtValue"));
         totAmtPerPersonTxtValue.setText(savedInstanceState.getString("totAmtPerPersonTxtValue"));
         overageTxtValue.setText(savedInstanceState.getString("overageTxtValue"));
     }
 
+    // Method to calculate the Tip Amount and Total Amount with Tip
     public void calculateTipTotal(View v) {
-
-        NumberFormat currFormat = NumberFormat.getCurrencyInstance();
-        String billTot = billTotalValue.getText().toString();
-        DecimalFormat f = new DecimalFormat("##.00");
         double tipAmount = 0.0;
         double totalAmount = 0.0;
+        String billTot = billTotalValue.getText().toString();
+        DecimalFormat f = new DecimalFormat("##.00");
+        NumberFormat currFormat = NumberFormat.getCurrencyInstance(Locale.US);
+
+        if(billTot.matches("")){
+            radioGroup.clearCheck();
+            return;
+        }
 
         if(v.getId() == R.id.rb1) {
             tipAmount = Double.parseDouble(f.format((Double.parseDouble(billTot)) * 0.12));
@@ -100,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Method to calculate the Total Amount Per Person and Overage Value
     public void goBtn(View v) {
         // Format values as currency
         NumberFormat currFormat = NumberFormat.getCurrencyInstance();
@@ -144,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Method that clears all the fields
     public void clearAllFields(View v) {
         billTotalValue.setText("");
         tipAmtTxtValue.setText("");
