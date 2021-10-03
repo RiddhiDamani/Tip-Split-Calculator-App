@@ -11,26 +11,22 @@
 
     <TextView
         android:id="@+id/billTotWithTaxLabel"
-        android:layout_width="180dp"
-        android:layout_height="34dp"
+        android:layout_width="169dp"
+        android:layout_height="27dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-light"
         android:text="@string/bill_total_with_tax"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tipPercentLabel"
-        android:layout_width="180dp"
-        android:layout_height="34dp"
+        android:layout_width="127dp"
+        android:layout_height="33dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="8dp"
         android:text="@string/tip_percent"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -39,11 +35,10 @@
 
     <TextView
         android:id="@+id/tipAmountLabel"
-        android:layout_width="180dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="148dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-light"
         android:text="@string/tip_amount"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -52,11 +47,10 @@
 
     <TextView
         android:id="@+id/totalWithTip"
-        android:layout_width="180dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="140dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-light"
         android:text="@string/total_with_tip"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -65,155 +59,146 @@
 
     <TextView
         android:id="@+id/numOfPeopleLabel"
-        android:layout_width="180dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="sans-serif-light"
+        android:layout_width="177dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/number_of_people"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/totalWithTip" />
+        app:layout_constraintBottom_toBottomOf="@+id/numOfPplTxt"
+        app:layout_constraintStart_toEndOf="@+id/billTotal"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/totalPerPerson"
-        android:layout_width="180dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="sans-serif-light"
+        android:layout_width="162dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="68dp"
         android:text="@string/total_per_person"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tipPercentRG"
         app:layout_constraintTop_toBottomOf="@+id/numOfPeopleLabel" />
 
     <TextView
         android:id="@+id/overage"
-        android:layout_width="180dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:fontFamily="sans-serif-light"
+        android:layout_width="161dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/overage"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tipAmtTxt"
         app:layout_constraintTop_toBottomOf="@+id/totalPerPerson" />
 
     <EditText
         android:id="@+id/billTotal"
-        android:layout_width="170dp"
+        android:layout_width="136dp"
         android:layout_height="33dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
         android:background="#DDBADFBB"
         android:ems="10"
         android:inputType="numberDecimal"
         android:textAlignment="textEnd"
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.7"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/billTotWithTaxLabel"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/numOfPplTxt"
-        android:layout_width="90dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="68dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:background="#DDBADFBB"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/numOfPeopleLabel"
-        app:layout_constraintTop_toBottomOf="@+id/totWithTipTxt"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/goBtn"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="80dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="435dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:onClick="goBtn"
         android:text="@string/goBtn"
-        app:layout_constraintStart_toEndOf="@+id/numOfPplTxt"
-        app:layout_constraintTop_toBottomOf="@+id/totWithTipTxt" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tipPercentLabel"
+        app:layout_constraintTop_toBottomOf="@+id/numOfPplTxt" />
 
     <TextView
         android:id="@+id/totAmtPerPersonTxt"
-        android:layout_width="170dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="138dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="12dp"
         android:background="#61B8B3B3"
         android:textAlignment="textEnd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/totalPerPerson"
-        app:layout_constraintTop_toBottomOf="@+id/numOfPplTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/numOfPeopleLabel" />
 
     <Button
         android:id="@+id/clearBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
         android:onClick="clearAllFields"
         android:text="@string/clear"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/overage" />
+        app:layout_constraintTop_toBottomOf="@+id/totWithTipTxt" />
 
     <TextView
         android:id="@+id/overageTxt"
-        android:layout_width="170dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="136dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="46dp"
         android:background="#61B8B3B3"
+        app:layout_constraintBottom_toTopOf="@+id/clearBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/overage"
         app:layout_constraintTop_toBottomOf="@+id/totAmtPerPersonTxt" />
 
     <TextView
         android:id="@+id/totWithTipTxt"
-        android:layout_width="170dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="141dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
         android:background="#61B8B3B3"
-        android:textAlignment="viewEnd"
-        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/totalWithTip"
         app:layout_constraintTop_toBottomOf="@+id/tipAmtTxt" />
 
     <TextView
         android:id="@+id/tipAmtTxt"
-        android:layout_width="170dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="140dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:background="#61B8B3B3"
-        android:textAlignment="viewEnd"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/tipAmountLabel"
         app:layout_constraintTop_toBottomOf="@+id/tipPercentRG" />
 
     <RadioGroup
         android:id="@+id/tipPercentRG"
-        android:layout_width="300dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:onClick="calculateTipTotal"
+        android:onClick="clickGroup1"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tipPercentLabel">
 
@@ -222,12 +207,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:checked="false"
             android:minWidth="50dp"
             android:minHeight="50dp"
-            android:onClick="calculateTipTotal"
+            android:onClick="clickGroup1"
             android:text="@string/_12"
-            android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
@@ -237,9 +220,8 @@
             android:layout_weight="1"
             android:minWidth="50dp"
             android:minHeight="50dp"
-            android:onClick="calculateTipTotal"
+            android:onClick="clickGroup1"
             android:text="@string/_15"
-            android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
@@ -249,9 +231,8 @@
             android:layout_weight="1"
             android:minWidth="50dp"
             android:minHeight="50dp"
-            android:onClick="calculateTipTotal"
+            android:onClick="clickGroup1"
             android:text="@string/_18"
-            android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
@@ -261,17 +242,9 @@
             android:layout_weight="1"
             android:minWidth="50dp"
             android:minHeight="50dp"
-            android:onClick="calculateTipTotal"
+            android:onClick="clickGroup1"
             android:text="@string/_20"
-            android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck" />
     </RadioGroup>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
