@@ -105,10 +105,13 @@ public class MainActivity extends AppCompatActivity {
         NumberFormat currFormat = NumberFormat.getCurrencyInstance();
         String billTotal = billTotalValue.getText().toString();
         String numOfPpl = numOfPplTxtValue.getText().toString();
-        String totWithTip = totWithTipTxtValue.getText().toString();
-        String dollar = "$";
+        String totAmtWithTip = totWithTipTxtValue.getText().toString();
 
-        if (billTotal.isEmpty() || numOfPpl.isEmpty()) {
+        if (billTotal.isEmpty()) {
+            return;
+        }
+
+        if(numOfPpl.isEmpty()) {
             return;
         }
 
@@ -117,21 +120,27 @@ public class MainActivity extends AppCompatActivity {
             numOfPpl = numOfPplTxtValue.getText().toString();
         }
 
-        // Pull total with tip from the screen without the $
-        totWithTip = totWithTip.substring(1, totWithTip.length());
-        double totalDouble = Double.parseDouble(totWithTip)*100;
+        // Extracting total amount with tip from screen without the 1st character i.e. $.
+        totAmtWithTip = totAmtWithTip.substring(1);
+
+        // Multiplying by 100 to remove decimals before dividing
+        double totalAmount = Double.parseDouble(totAmtWithTip) * 100;
+
+        // Taking in number of people as int value
         int numOfPeople = Integer.parseInt(numOfPpl);
 
+        // Total per person calculation
+        double tAppCValue = Math.ceil(totalAmount/numOfPeople);
+        double tAppVal = (totalAmount/numOfPeople);
+        double overage = ((tAppCValue - tAppVal) * numOfPeople);
 
-        double retd = Math.ceil(totalDouble/numOfPeople);
-        double retO = (totalDouble/numOfPeople);
-        double overage = ((retd-retO) * numOfPeople);
+        // Filling UI Data field on screen - Total Amount Per Person Text Field
+        double finalVal = tAppCValue/100;
+        totAmtPerPersonTxtValue.setText(currFormat.format(finalVal));
 
-        // updates total per person on screen
-        totAmtPerPersonTxtValue.setText(currFormat.format(retd/100));
-
-        // updates overage on screen
-        overageTxtValue.setText(currFormat.format(overage/100));
+        // Filling UI Data field on screen - Overage Text Field
+        double finalOvgVal = overage/100;
+        overageTxtValue.setText(currFormat.format(finalOvgVal));
 
     }
 
