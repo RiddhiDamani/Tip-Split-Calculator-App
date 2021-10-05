@@ -24,10 +24,8 @@ Pressing the “Clear” button will clear all fields
 
 Emulator Devices used for testing: 
 
-Resolution      Details             Emulators Used
-1080 x 1920     With Playstore      Nexus 5X
-1080 x 2280     With Playstore      Pixel 4
-
+1) Emulator used: Nexus 5X | Resolution: 1080 x 1920 | Details: With Playstore      
+2) Emulator used: Pixel 4  | Resolution: 1080 x 2280 | Details: With Playstore      
 
 ScreenShots: 
 
