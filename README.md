@@ -22,5 +22,16 @@ and “overage” values should be calculated and their data fields on the UI sh
 
 Pressing the “Clear” button will clear all fields
 
+Emulator Devices used for testing: 
+
+Resolution      Details             Emulators Used
+1080 x 1920     With Playstore      Nexus 5X
+1080 x 2280     With Playstore      Pixel 4
+
+
 ScreenShots: 
 
+1. Portrait Orientation 
+
+
+2. Landscape Orientation 
