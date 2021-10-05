@@ -33,5 +33,8 @@ ScreenShots:
 
 1. Portrait Orientation 
 
+![Portrait](https://github.com/RiddhiDamani/Tip-Split-Calculator-App/tree/master/app/src/main/res/potrait.png)
 
 2. Landscape Orientation 
+
+![Landscape](https://github.com/RiddhiDamani/Tip-Split-Calculator-App/tree/master/app/src/main/res/landscape.png)
