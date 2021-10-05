@@ -109,11 +109,11 @@ public class MainActivity extends AppCompatActivity {
         String numOfPpl = numOfPplTxtValue.getText().toString();
         String totAmtWithTip = totWithTipTxtValue.getText().toString();
 
-        if (billTotal.isEmpty()) {
+        if (billTotal.isEmpty() || billTotal.equals("0")) {
             return;
         }
 
-        if(numOfPpl.isEmpty()) {
+        if(numOfPpl.isEmpty() || numOfPpl.equals("0")) {
             return;
         }
 

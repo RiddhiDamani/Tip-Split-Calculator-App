@@ -147,8 +147,9 @@
         android:layout_marginEnd="16dp"
         android:background="#DDBADFBB"
         android:ems="10"
+        android:hint="@string/_0_00_bt"
         android:includeFontPadding="true"
-        android:inputType="numberDecimal"
+        android:inputType="number|numberDecimal"
         android:labelFor="@id/billTotWithTaxLabel"
         android:paddingLeft="5dp"
         android:paddingTop="3dp"
@@ -160,7 +161,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
 
     <EditText
         android:id="@+id/numOfPplTxt"
@@ -170,6 +171,7 @@
         android:layout_marginTop="32dp"
         android:background="#DDBADFBB"
         android:ems="10"
+        android:hint="@string/_1"
         android:includeFontPadding="true"
         android:inputType="number"
         android:labelFor="@id/numOfPeopleLabel"
@@ -181,7 +183,7 @@
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/numOfPeopleLabel"
         app:layout_constraintTop_toBottomOf="@+id/totWithTipTxt"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     <Button
         android:id="@+id/goBtn"
@@ -205,6 +207,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="16dp"
         android:background="#61B8B3B3"
+        android:hint="@string/_0_00_tapp"
         android:includeFontPadding="true"
         android:paddingLeft="5dp"
         android:paddingTop="3dp"
@@ -215,7 +218,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/totalPerPerson"
-        app:layout_constraintTop_toBottomOf="@+id/numOfPplTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/numOfPplTxt"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/clearBtn"
@@ -239,6 +243,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:background="#61B8B3B3"
+        android:hint="@string/_0_00_ovg"
         android:includeFontPadding="true"
         android:paddingLeft="5dp"
         android:paddingTop="3dp"
@@ -249,7 +254,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/overage"
-        app:layout_constraintTop_toBottomOf="@+id/totAmtPerPersonTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/totAmtPerPersonTxt"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/totWithTipTxt"
@@ -258,6 +264,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="#61B8B3B3"
+        android:hint="@string/_0_00_twt"
         android:includeFontPadding="true"
         android:paddingLeft="5dp"
         android:paddingTop="3dp"
@@ -266,7 +273,8 @@
         android:textAlignment="viewEnd"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/totalWithTip"
-        app:layout_constraintTop_toBottomOf="@+id/tipAmtTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/tipAmtTxt"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/tipAmtTxt"
@@ -275,6 +283,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:background="#61B8B3B3"
+        android:hint="@string/_0_00_tat"
         android:includeFontPadding="true"
         android:paddingLeft="5dp"
         android:paddingTop="3dp"
@@ -283,7 +292,8 @@
         android:textAlignment="viewEnd"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/tipPercentRG" />
+        app:layout_constraintTop_toBottomOf="@+id/tipPercentRG"
+        tools:ignore="TextContrastCheck" />
 
     <RadioGroup
         android:id="@+id/tipPercentRG"
