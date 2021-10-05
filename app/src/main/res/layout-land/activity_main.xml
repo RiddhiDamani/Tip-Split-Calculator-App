@@ -226,7 +226,7 @@
         android:id="@+id/clearBtn"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:onClick="clearAllFields"
         android:text="@string/clear"
         android:textSize="16sp"
