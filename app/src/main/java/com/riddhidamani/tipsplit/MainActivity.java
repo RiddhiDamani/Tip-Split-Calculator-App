@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import java.text.DecimalFormat;
@@ -14,7 +13,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
+    //private static final String TAG = "MainActivity";
 
     private EditText billTotalValue;
     private EditText numOfPplTxtValue;
@@ -70,16 +69,17 @@ public class MainActivity extends AppCompatActivity {
     // Method to calculate the Tip Amount and Total Amount with Tip
     public void calculateTipTotal(View v) {
         double tipAmount = 0.0;
-        double totalAmount = 0.0;
+        double totalAmount;
         String billTot = billTotalValue.getText().toString();
         DecimalFormat f = new DecimalFormat("##.00");
         NumberFormat currFormat = NumberFormat.getCurrencyInstance(Locale.US);
 
-        if(billTot.matches("")){
+        if(billTot.matches("") || billTot.matches("0")){
             radioGroup.clearCheck();
             return;
         }
 
+        // Calculating Tip Percentage/ Tip amount
         if(v.getId() == R.id.rb1) {
             tipAmount = Double.parseDouble(f.format((Double.parseDouble(billTot)) * 0.12));
         }
@@ -92,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
         else if(v.getId() == R.id.rb4) {
             tipAmount = Double.parseDouble(f.format((Double.parseDouble(billTot)) * 0.20));
         }
-        //((RadioButton)v).setChecked(false);
 
+        // Calculating Total amount with Tip
         totalAmount = (Double.parseDouble(billTot)) + tipAmount;
 
         // Setting the screen values
@@ -116,11 +116,6 @@ public class MainActivity extends AppCompatActivity {
 
         if(numOfPpl.isEmpty() || numOfPpl.equals("0")) {
             return;
-        }
-
-        if (billTotal.equals("0")) {
-            numOfPplTxtValue.setText("1");
-            numOfPpl = numOfPplTxtValue.getText().toString();
         }
 
         // Extracting total amount with tip from screen without the 1st character i.e. $.

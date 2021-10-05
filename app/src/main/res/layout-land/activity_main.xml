@@ -226,7 +226,9 @@
         android:id="@+id/clearBtn"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="24dp"
         android:onClick="clearAllFields"
         android:text="@string/clear"
         android:textSize="16sp"
@@ -317,11 +319,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contextClickable="false"
             android:minWidth="50dp"
             android:minHeight="50dp"
             android:onClick="calculateTipTotal"
             android:text="@string/_12"
             android:textColor="#1B1919"
+            android:textColorLink="#673AB7"
             android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -334,6 +338,7 @@
             android:minHeight="50dp"
             android:onClick="calculateTipTotal"
             android:text="@string/_15"
+            android:textColorLink="#673AB7"
             android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -346,6 +351,7 @@
             android:minHeight="50dp"
             android:onClick="calculateTipTotal"
             android:text="@string/_18"
+            android:textColorLink="#673AB7"
             android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -358,6 +364,8 @@
             android:minHeight="50dp"
             android:onClick="calculateTipTotal"
             android:text="@string/_20"
+            android:textColorHighlight="#673AB7"
+            android:textColorLink="#673AB7"
             android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck" />
     </RadioGroup>
